@@ -1,0 +1,107 @@
+:root {
+  color: black;
+  background: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "bungee";
+  background-color: white;
+  color: black;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 7%;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 3px solid #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-style: italic;
+  color: blue;
+  text-shadow: 1px 3px 5px rgb(126, 167, 255);
+}
+
+.navbar .navbar-logo span {
+  color: yellow;
+  text-shadow: 1px 1px 3px #111;
+}
+
+.navbar .navbar-nav a {
+  font-family: "bungee inline";
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+  margin: 1rem;
+  display: inline-block;
+}
+
+.navbar .navbar-nav a:hover {
+  color: yellow;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.01rem;
+  border-bottom: 0.15rem solid #111;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: black;
+}
+
+.navbar .navbar-extra a:hover {
+  color: yellow;
+}
+
+#menu {
+  display: none;
+}
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
